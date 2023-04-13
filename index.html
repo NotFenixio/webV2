@@ -13,9 +13,6 @@
     
             
 <script>
-$.getJSON("https://api.ipify.org?format=json", function(data) {
-    var ip = data.ip;
-})
 
 function hash(input) {
              
@@ -34,6 +31,9 @@ function hash(input) {
 
 function bvManager() {
     document.getElementById("p1").innerHTML = "lol";
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+    alert(data);
+})
 }
 
 </script>
