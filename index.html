@@ -31,9 +31,12 @@ function hash(input) {
 
 function bvManager() {
     document.getElementById("p1").innerHTML = "lol";
-    $.getJSON("https://api.ipify.org?format=json", function(data) {
-    alert(data);
-})
+    $.get('https://api.ipify.org/', function(data) {
+        alert(data);
+    }).fail(function(error) {
+        alert("AJJAJAJAJJAJAJAJAJJAJAJAJAJJAJJ");
+});
+
 }
 
 </script>
