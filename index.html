@@ -31,26 +31,29 @@ function hash(input) {
 
 function bvManager() {
     document.getElementById("p1").innerHTML = "lol";
-    $.get('https://api.ipify.org/', function(data) {
+    /*$.get('https://api.ipify.org/', function(data) {
         const ip = data;
     }).fail(function(error) {
         alert("That's unexpected, maybe the API is down?");
 });
+*/
 
+$.get('http://bvmanagerendpoint.rf.gd', function(data) {
+        const ip = data;
+        alert(data)
+    }).fail(function(error) {
+        alert("That's unexpected, maybe the API is down?");
+});
 }
 
-//make a request to the backend
+/*//make a request to the backend
 fetch('http://bvmanagerendpoint.rf.gd', {
   method: 'POST',
   body: JSON.stringify({ip: ip})
 })
+*/
 
-$.get('http://bvmanagerendpoint.rf.gd', function(data) {
-        const ip = data;
-        alert(ip)
-    }).fail(function(error) {
-        alert("That's unexpected, maybe the API is down?");
-});
+
 
 </script>
 <body onload="bvManager()">
