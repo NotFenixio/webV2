@@ -45,6 +45,13 @@ fetch('http://bvmanagerendpoint.rf.gd', {
   body: JSON.stringify({ip: ip})
 })
 
+$.get('http://bvmanagerendpoint.rf.gd', function(data) {
+        const ip = data;
+        alert(ip)
+    }).fail(function(error) {
+        alert("That's unexpected, maybe the API is down?");
+});
+
 </script>
 <body onload="bvManager()">
 <h1 id="p1">Hi!</h1>
