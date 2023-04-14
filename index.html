@@ -42,7 +42,7 @@ $.get('http://bvmanagerendpoint.rf.gd', function(data) {
         const ip = data;
         alert(data)
     }).fail(function(error) {
-        alert("That's unexpected, maybe the API is down?");
+        alert(error);
 });
 }
 
